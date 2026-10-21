@@ -45,7 +45,7 @@ if __name__ == '__main__':
             db_path=sys.argv[2],
         )
     except FileNotFoundError as e:
-        print(f'ERROR: File not found - {e.filename}', file=sys.stderr)
+        print(f'ERROR: File not found: {e}', file=sys.stderr)
         sys.exit(1)
     except Exception as e:
         print(f'ERROR: An unexpected error occurred: {e}', file=sys.stderr)
