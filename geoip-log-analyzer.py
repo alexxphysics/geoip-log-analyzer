@@ -36,8 +36,8 @@ def analyze_logs(input_file, db_path):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print('ERROR: Insufficient arguments')
-        print('Usage: python geoip-log-analyzer.py <input_file> <db_path>')
+        print('ERROR: Insufficient arguments', file=sys.stderr)
+        print('Usage: python geoip-log-analyzer.py <input_file> <db_path>', file=sys.stderr)
         sys.exit(1)
     try:
         analyze_logs(
